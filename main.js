@@ -27,6 +27,8 @@ let app = new Vue({
       }
       console.log(currentIndex);
     },
-
+    pointerClick: function(index){
+      this.selectedImg = this.img[index];
+    },
   },
 });
