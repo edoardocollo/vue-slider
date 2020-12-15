@@ -12,9 +12,20 @@
 }
 #app{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 img {
   width: 800px;
+}
+#pointer_wrap {
+  display: flex;
+}
+.pointer {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 50%;
 }
