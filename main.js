@@ -15,6 +15,12 @@ let app = new Vue({
         this.selectedImg = this.img[currentIndex];
       }
       console.log(currentIndex);
+      const target = document.querySelectorAll('.pointer');
+      target.forEach(e =>{
+        e.className = 'pointer'
+      });
+      target[this.img.indexOf(this.selectedImg)].className += ' active';
+
     },
     previous: function(){
       let currentIndex = this.img.indexOf(this.selectedImg);
@@ -26,9 +32,22 @@ let app = new Vue({
         this.selectedImg = this.img[currentIndex];
       }
       console.log(currentIndex);
+
+      const target = document.querySelectorAll('.pointer');
+      target.forEach(e =>{
+        e.className = 'pointer'
+      });
+      target[this.img.indexOf(this.selectedImg)].className += ' active';
+
     },
     pointerClick: function(index){
       this.selectedImg = this.img[index];
+
+      const target = document.querySelectorAll('.pointer');
+      target.forEach(e =>{
+        e.className = 'pointer'
+      });
+      target[index].className += ' active'
     },
   },
 });
