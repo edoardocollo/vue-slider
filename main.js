@@ -50,4 +50,7 @@ let app = new Vue({
       target[index].className += ' active'
     },
   },
+  created() {
+      this.interval = setInterval(() => this.next(), 6000);
+  },
 });
