@@ -14,17 +14,18 @@
 
   <div id="app">
     <div id="main_wrap">
-    <button v-on:click="previous" id="previous">
+    <button v-on:click="previous"  id="previous">
       <i class="fas fa-arrow-left"></i>
     </button>
-    <img :src="'img/' + selectedImg" alt="">
+    <img :src="img[index]" alt="">
     <button v-on:click="next" id="next">
       <i  class="fas fa-arrow-right"></i>
     </button>
   </div>
   <div id="pointer_wrap">
-    <div v-for="(pointer,index) in img" class="pointer" v-on:click="pointerClick(index)"></div>
+    <div v-for="(pointer, i) in img" v-on:click="pointerClick(i)" class="pointer"></div>
   </div>
+
 </div>
 
 
